@@ -1,0 +1,1 @@
+@extends('adminPgi.plantillas.main')
