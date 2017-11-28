@@ -85,10 +85,11 @@ class ArticuloController extends Controller
            
           //guardar el articulo
             $arti = new  Articulos($request->all());
+
             $arti-> user_id = Auth::user()->id;
             $arti->categoria_id = $request->categoria_id;
-           // dd($arti);
-            $arti->save();
+           
+           $arti->save();
 
             $arti->tags()->sync($request->tags);
 

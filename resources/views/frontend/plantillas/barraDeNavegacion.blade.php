@@ -8,12 +8,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="" class="navbar-brand">PGI</a>
+				<a href="{{ route('frontend.index') }}" class="navbar-brand">PGI</a>
 			</div>
 			<!-- inicia menu -->
 			<div class="collapse navbar-collapse" id="navegacion1">
 				<ul class="nav navbar-nav">
-					<li><a href="index.html">Inicio</a></li>
+					<li><a href="{{ route('frontend.index') }}">Inicio</a></li>
 					<li>
 						<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button">Servicio <span class="caret"></span>
 						</a>
