@@ -30,12 +30,15 @@ Route::get('Articulos/{titulo}',
 );
 //rutas del admin
 
-Route::group(['prefix' => 'admin','middleware' => ['auth','admin']], function()
+Route::group(['prefix' => 'admin','middleware' => 'auth'], function()
 {
-	Route::resource('users','UsersController');
-	Route::get('users/{id}/destroy',[
-		'uses' => 'UsersController@destroy',
-		'as'   => 'admin.users.destroy']);
+	Route::group(['middleware'=>'admin'],function(){
+		Route::resource('users','UsersController');
+		Route::get('users/{id}/destroy',[
+			'uses' => 'UsersController@destroy',
+			'as'   => 'admin.users.destroy']);
+	});
+	
 	
 	Route::resource('categorias','CategoriasController');
 	Route::get('categorias/{id}/destroy', [
