@@ -45,6 +45,10 @@ class Articulos extends Model
     {
             $query->where('categoria_id','=',$id);
     }
+    public function scopeVistaArticulo($query,$titulo)
+    {
+        $query->where('titulo','=',$titulo);
+    }
    
     
 }

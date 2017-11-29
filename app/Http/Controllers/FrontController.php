@@ -63,4 +63,10 @@ class FrontController extends Controller
        dd($tag);
     }
 
+    public function vistaArticulo($titulo)
+    {
+        $articulo = Articulos::VistaArticulo($titulo)->get();
+        dd($articulo);
+    }
+
 }

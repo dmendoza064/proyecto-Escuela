@@ -44,13 +44,15 @@
 									<div class="panel panel-default">
 									  
 									  <div class="panel-body">
+									  	<a href="{{ route('frontend.vista.articulo',$articulos->titulo) }}">
 
 									   
 									    @foreach($articulos->imagenes as $imagen)
 						 					<img class="img-thumbnail" src="\imagenes\articulos\{{$imagen->nombre}}"  alt="100%x180" style="height: 180px;width: 100%;">
 						 				@endforeach
+						 			</a>
 						 				<h2 class="post-title">
-						 					<a href="informe-infonavit.html">{{$articulos->titulo}}</a>
+						 					<a href="{{ route('frontend.vista.articulo',$articulos->titulo) }}">{{$articulos->titulo}}</a>
 						 				</h2>
 						 				<hr>
 						 				<a href="{{route('frontend.busqueda.CategoriaBusqueda', $articulos->categoria->nombre) }}">

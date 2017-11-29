@@ -25,7 +25,7 @@ Route::get('Tags/{nombre}',[
 	'as'   => 'frontend.busqueda.TagBusqueda'
 ]);
 Route::get('Articulos/{titulo}',
-	['uses' => 'FrontController@vitaArticulo',
+	['uses' => 'FrontController@vistaArticulo',
 	 'as'	=> 'frontend.vista.articulo']
 );
 //rutas del admin
