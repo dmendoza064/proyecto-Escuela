@@ -12,7 +12,7 @@
 	  </div>
 	</div>
 
-<h4>
+<!--
 	<div class="panel panel-primary">
 	  <div class="panel-heading">
 	    <h3 class="panel-title">Tags</h3>
@@ -20,7 +20,8 @@
 	  <div class="panel-body">
 	    
 				 			@foreach($tags as $tag)
-						    <a href="{{ route('frontend.busqueda.TagBusqueda', $tag->nombre) }}" class="list-group-item ">{{$tag->nombre}}<span class="badge"><!----></span></a> 
+						    <a href="{{ route('frontend.busqueda.TagBusqueda', $tag->nombre) }}" class="list-group-item ">{{$tag->nombre}}<span class="badge"></span></a> 
 						    @endforeach
 	  </div>
 	</div>
+-->
