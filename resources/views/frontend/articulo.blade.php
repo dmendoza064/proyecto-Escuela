@@ -5,25 +5,25 @@
  @include('frontend.plantillas.headfront')
 @show
 <body>
-<header class="jumbotron ">
+<header class="jumbotron1 ">
   <div class=" row  ">
     
-      <div class="col-md-4 center-block quitarFloat ">
-       <div class="portada1  ">
-        <img src="\imagenes\fotos\BUENO 1 NEGRO.png " class=" estiloImagen text-center" alt="Responsive image"  >
-       </div>
-      <!-- <div class=" ">
-        
-          <h1 class="grande">PLATAFORMA DE GARANTIA INMOBILIARIA</h1>
-          <h2 class=" ">Lo mas importante para nostos eres tú... ¡No estas solo!</h2>
-       </div> -->
-       </div>
+      <!--<div class="col-md-4 center-block quitarFloat ">
+	      <!-- <div class="portada1  ">
+	        <img src="\imagenes\fotos\BUENO 1 NEGRO.png " class=" estiloImagen text-center" alt="Responsive image"  >
+	       </div>
+	       <div class=" ">
+	        
+	          <h1 class="grande">PLATAFORMA DE GARANTIA INMOBILIARIA</h1>
+	          <h2 class=" ">Lo mas importante para nostos eres tú... ¡No estas solo!</h2>
+	       </div> -->
+      <!--</div>-->
     
     </div>
 
 </header>
 <!-- slider-->
-@include('frontend.plantillas.slide')
+
 <!-- fin del slider -->
 <!-- barra de navegacion-->
 @include('frontend.plantillas.barraDeNavegacion')
@@ -32,14 +32,20 @@
 
   <!-- main -->
   <section>
-  	<div class="container">
+  	<div class="container para-abajo">
   		<div class="row">
   			<div class="col-md-9">
   				<article class="post clearfix">
   					@foreach($articulo as $articulos)
+
+  					@foreach($articulos->imagenes as $imagen)
+						 					<img class="img-thumbnail center-block quitarFloat" src="\imagenes\articulos\{{$imagen->nombre}}" alt="100%x450" style="height: 450px;width: 100%;" >
+						 				@endforeach
 		 				<h2 class="titlt-front left">{{ $articulos->titulo }} </h2>
+		 				<i class="fa fa-clock-o"></i>{{ $articulos->created_at->diffForHumans() }}
+		 				<br>
 		 				
-		 					<div class="post-contenido text-justify">{!! $articulos->contenido !!}</div>
+		 					<div class="post-contenido text-justify a-abajo">{!! $articulos->contenido !!}</div>
 		 			@endforeach
 		 			<h3>Comentarios</h3>
 		 			<div id="disqus_thread"></div>

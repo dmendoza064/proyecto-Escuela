@@ -15,7 +15,26 @@
   margin-top:  20px;
 
 }
-.jumotron .row .text-center h1
+.para-abajo
+{
+	margin-top: 100px;
+}
+.a-abajo
+{
+	margin-top: 30px;
+}
+.jumbotron1
+{
+	/*background-image: url(/imagenes/fotos/mg.jpg);
+	
+	background-repeat: no-repeat;
+ /* background-position: center; */
+  background-attachment: contain;
+  background-size: 100%;
+  color: #ECF0F1;
+  margin-top:  20px;
+}
+.jumbotron .row .text-center h1
 {
 	font-size: 2em;
 }
