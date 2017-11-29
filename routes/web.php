@@ -24,6 +24,10 @@ Route::get('Tags/{nombre}',[
 	'uses' => 'FrontController@Tagfornt',
 	'as'   => 'frontend.busqueda.TagBusqueda'
 ]);
+Route::get('Articulos/{titulo}',
+	['uses' => 'FrontController@vitaArticulo',
+	 'as'	=> 'frontend.vista.articulo']
+);
 //rutas del admin
 
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function()
