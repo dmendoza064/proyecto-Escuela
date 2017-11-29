@@ -30,7 +30,7 @@ Route::get('Articulos/{titulo}',
 );
 //rutas del admin
 
-Route::group(['prefix' => 'admin','middleware' => 'auth'], function()
+Route::group(['prefix' => 'admin','middleware' => ['auth','admin']], function()
 {
 	Route::resource('users','UsersController');
 	Route::get('users/{id}/destroy',[
