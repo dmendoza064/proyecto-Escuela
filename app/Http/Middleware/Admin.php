@@ -31,6 +31,10 @@ class Admin
         if ($this->auth->user()->tipoUser()) {
             return $next($request);
         }
+        else
+        {
+            dd("no eres admin");
+        }
         //dd($this->auth->user()->tipoUser());
         
     }

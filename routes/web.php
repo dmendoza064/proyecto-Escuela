@@ -57,16 +57,19 @@ Route::group(['prefix' => 'admin','middleware' => ['auth','admin']], function()
 
 	Route::resource('Prue','prueba');
 	
-});
-
-Auth::routes();
-//login
-Route::get('/admin', function () {
+	Route::get('/', function () {
     return redirect('/login');
+	});
+
+	Route::get('/home', 'HomeController@index')->name('home');
 });
+Auth::routes();
+
+	
+//login
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 
