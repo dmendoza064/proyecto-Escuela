@@ -66,7 +66,17 @@ class FrontController extends Controller
     public function vistaArticulo($titulo)
     {
         $articulo = Articulos::VistaArticulo($titulo)->get();
-        dd($articulo);
+        $articulo->each(function($articulo)
+        {
+            $articulo->categoria;
+            //dd($articulo);
+            $articulo->user;
+            $articulo->imagenes;
+            $articulo->tags;
+        });
+        
+        
+        return view('frontend.articulo')->with('articulo',$articulo);
     }
 
 }

@@ -11,10 +11,14 @@ class Articulos extends Model
     
     protected $table ="articulos";
 
-    protected $fillable = ['titulo','contenido','slug','user_id','categoria_id'];
+    protected $fillable = ['titulo','contenido','user_id','categoria_id'];
     
     
 
+    /*public function categoria()
+    {
+        return $this->belongsTo('App\Categorias');
+    }*/
     public function categoria()
     {
         return $this->belongsTo('App\Categorias');

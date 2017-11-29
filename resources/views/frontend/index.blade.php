@@ -32,6 +32,7 @@
 
   <!-- main -->
 @include('frontend.plantillas.mainfront')
+@yield('contenido')
   <!--cierra de seccion -->
   <!-- inicio de pie de pagina-->
  @include('frontend.plantillas.piedePagina')
